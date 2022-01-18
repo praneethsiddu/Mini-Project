@@ -93,12 +93,13 @@ def main():
     if data is None:
         st.warning("No file Provided to work on")
     else:
-        pr = ProfileReport(df1, explorative=True)
-        st.header('**Input DataFrame**')
-        st.write(df)
-        st.write('---')
-        st.header('**Pandas Profiling Report**')
-        st_profile_report(pr)
+	if st.button("Generate Report):
+		pr = ProfileReport(df1, explorative=True)
+        	st.header('**Input DataFrame**')
+        	st.write(df)
+        	st.write('---')
+        	st.header('**Pandas Profiling Report**')
+        	st_profile_report(pr)
      
      
                   
@@ -108,7 +109,7 @@ def main():
      st.write(df.shape)
      st.subheader("Data Visualization")
      if st.checkbox("Quick Analysis"):
-         select_ = st.radio("Select Type for Quick Analysis",('Correlation Heatmap','Count Plot','Line chart','Bar chart','area chart','Scatter Plot','Histogram','Pair Plot'))
+         select_ = st.radio("Select Type for Quick Analysis",('None','Correlation Heatmap','Count Plot','Line chart','Bar chart','area chart','Scatter Plot','Histogram','Pair Plot'))
          if select_ == "Count Plot":
              st.write(df1.dtypes)
              s = st.selectbox('select the column',df1.columns)
