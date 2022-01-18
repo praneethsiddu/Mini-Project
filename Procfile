@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run automl.py
+web: sh setup.sh && streamlit run Eda.py
