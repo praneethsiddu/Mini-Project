@@ -94,12 +94,12 @@ def main():
         st.warning("No file Provided to work on")
     else:
 	if st.button("Generate Report):
-		pr = ProfileReport(df1, explorative=True)
-        	st.header('**Input DataFrame**')
-        	st.write(df)
-        	st.write('---')
-        	st.header('**Pandas Profiling Report**')
-        	st_profile_report(pr)
+		     pr = ProfileReport(df1, explorative=True)
+        	     st.header('**Input DataFrame**')
+        	     st.write(df)
+        	     st.write('---')
+        	     st.header('**Pandas Profiling Report**')
+        	     st_profile_report(pr)
      
      
                   
